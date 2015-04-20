@@ -1,0 +1,39 @@
+{
+  "private": false,
+  "main": "index.js",
+  "name": "Testing-Status",
+  "description": "Testing for Status A and B",
+  "version": "0.0.1",
+  "repository": 
+  {
+    "type": "git",
+    "url": "https://github.com/u13073878/COS301-Testing-Status"
+  },
+  "bugs": 
+  {
+    "url": "https://github.com/u13073878/COS301-Testing-Status/issues"
+  },
+  "homepage": "https://github.com/u13073878/COS301-Testing-Status", 
+  "contributors": [
+    {
+      "name": "Daniel Christopher Alves Araujo",
+      "email": "u13073878@tuks.co.za"
+    },
+    {
+      "name": "Mpedi Mello",
+      "email": "11210754@tuks.co.za"
+    },
+    {
+      "name": "Frederick Snyman",
+      "email": "frikkie.snyman@live.co.za"
+    }
+  ],
+  "dependencies": 
+  {
+	"Status-B": "git://https://github.com/BuzzSpaceB/Status#master",
+	"mongoose": "^4.0.1",
+    "DatabaseStuff": "git://github.com/BuzzSpaceB/DatabaseStuff#master"
+  }
+}
+
+
