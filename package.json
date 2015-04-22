@@ -20,17 +20,42 @@
       "email": "u13073878@tuks.co.za"
     },
     {
+      "name": "Taariq Ghoord",
+      "email": "u10132806@tuks.co.za"
+    },
+    {
+      "name": "Lerato Lelo",
+      "email": "u11197961@tuks.co.za"
+    },
+    {
+      "name": "Semaka Malapane",
+      "email": "u13081129@tuks.co.za"
+    },
+    {
       "name": "Mpedi Mello",
-      "email": "11210754@tuks.co.za"
+      "email": "u11210754@tuks.co.za"
+    },
+    {
+      "name": "Ryno Pierce",
+      "email": "u12003922@tuks.co.za"
+    },
+    {
+      "name": "Lutfiyya Razak",
+      "email": "u10198408@tuks.co.za"
     },
     {
       "name": "Frederick Snyman",
       "email": "frikkie.snyman@live.co.za"
+    },
+    {
+      "name": "Keagan Thompson",
+      "email": "13023782@tuks.co.za"
     }
   ],
   "dependencies": 
   {
-	"Status-B": "git://https://github.com/BuzzSpaceB/Status#master",
+	"Status-A": "git://github.com/lana01/Status-A#master",
+	"Status-B": "git://github.com/BuzzSpaceB/Status#master",
 	"mongoose": "^4.0.1",
     "DatabaseStuff": "git://github.com/BuzzSpaceB/DatabaseStuff#master"
   }
