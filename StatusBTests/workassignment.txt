@@ -1,0 +1,3 @@
+For B : AsessProfile Mpedi, setStatusCalculalor taariq, createAppraisal Semaka, ActivateAppraisalType Chris,  assignAppraisalToPost Frikkie
+
+For A: AssesProfile Lerato, SetStatusCalculator Lutfya, createAprraisal Keags, getStatusProfile taariq, activateAppraisalType and assignAppraisalType keags and Ryno

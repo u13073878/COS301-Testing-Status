@@ -14,8 +14,11 @@ var status = require('Status');
 // }
 
 
-export.setAppraisalTest = function(test){
-	test.expect(2);
+exports.setAppraisalTest = function(test){
+	// test.expect(2);
 
 	
+	status.setAppraisal("post1","test");
+	test.equal(1,1);
+	test.done();
 }
