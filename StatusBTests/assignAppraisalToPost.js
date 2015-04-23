@@ -1,7 +1,15 @@
+
 var status = require('Status');
 
-// // I'm thinking that the testig for this comes from setAppraisal.js, seeing as the team does not have the function names as specified in the
-// // master specs
+exports.setAppraisalTest = function(test)
+{
+	test.expect(1);
 
-// Waiting to hear on Chris for exactly what's going on here..
-
+	status.setAppraisal("post1", "Education");
+	
+	status.getPostAppraisal("post1",function(res){
+		console.log(res);
+		test.equal(res,"Education");
+		test.done();
+	});
+}

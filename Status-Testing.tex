@@ -90,7 +90,7 @@ Nodeunit was used for doing unit tests on this code, and the code of the unit te
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{Figures/getStatusForProfile_unittests.png}
-		\caption{Unit tests for getStatusForProfile}
+		\caption{Unit tests for \textit{getStatusForProfile}}
 	\end{figure}
 	
 Executing the tests above resulted in the following output:
@@ -98,7 +98,7 @@ Executing the tests above resulted in the following output:
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{Figures/getStatusForProfile_results.png}
-		\caption{Results of the unit tests for getStatusForProfile}
+		\caption{Results of the unit tests for \textit{getStatusForProfile}}
 	\end{figure}
 	
 The tests that are run, checks the status value for six users present in the database, with differing status values. All six tests pass successfully and the function \textit{getStatusForProfile} appears to hav been implemented correctly as per the master specification. These test cases cover 100\% of the use cases as defined in the master specification.
@@ -164,7 +164,30 @@ Due to the \textit{setAppraisal()} failing, the function does not meet the post-
 \subsection{group B - assignAppraisalToPost}
 %add test results for group B assignAppraisalToPost here
 %Frikkie
+There is no explicit \textit{assignAppraisalToPost} function available from Status B, however, they have provided a function \textit{setAppraisal} which seems to attempt to fulfil that which is prescribed by \textit{assignAppraisalToPost}, as seen on Figure 46 of the master specifications.
+The function \textit{setAppraisal} receives two parameters, the first is the post ID which is used to identify the post, and the second is the Appraisal ID, which is used to identify the ID that is to be assigned.
+
+Nodeunit was used for doing the unit tests.
+
+Below is the code for the unit tests that was used for testing \textit{setAppraisal}:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figures/assignAppraisalToPost_unittest.png}
+		\caption{Unit tests for \textit{assignAppraisalToPost}}
+	\end{figure}
+	
+The figure below is the result of running the unit tests
 
 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figures/assignAppraisalToPost_result.png}
+		\caption{Results of the unit tests for \textit{assignAppraisalToPost}}
+	\end{figure}
+
+The pre-conditions to be held as per the master specifications, is that a buzz space must be open before the function \textit{assignAppraisalToPost} can be executed. It is not validated in the code that this pre-condition is upheld before continuing with execution. The post-condition hold, since the unit test passed.
+
+The unit tests cover 100\% of the use cases.
 
 \end{document}
