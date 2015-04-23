@@ -1,5 +1,8 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
 \begin{document}
 \begin{center}
 
@@ -105,7 +108,32 @@ Keagan Thompson&13023782\\
 %add test results for group B activateAppraisalType here
 %Chris
 
+Status B did not provide an explicit \textit{activateAppraisalType} function that matches Figure 45 of the project specifications.
+However, Status B does provide two functions, \textit{activePeriod()} and \textit{setAppraisal()}.
 
+The code for the unit tests is given by the figure below. For the test, NodeUnit was used.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{LaTeX/Figures/activateAppraisalTypeUnitTests.png}
+		\caption{Unit test for activateAppraisalType}
+	\end{figure}
+
+The following was the output given by NodeUnit.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{LaTeX/Figures/activateAppraisalTypeUnitTestOutput.png}
+		\caption{Output of unit tests for activateAppraisalType}
+	\end{figure}
+
+The first test, \textit{activePeriodTest}, passes. \textit{activePeriod()} takes two strings as parameters that represent the starting and ending date. However, it does no testing to ensure that the dates are in the correct format supported by JavaScript. Secondly, it does not have a callback parameter to specify a callback function, so it cannot be run asynchronously.
+
+The section function, \textit{setAppraisal()}, fails. The function receives two parameters, a \textbf{post\_id} and and \textbf{appraisal\_name} to find a record in the database matching the \textbf{post\_id} and assign the \textbf{appraisal\_name} to \textbf{appraisal\_id} in the database. The function has an error that attempts to assign a null value to \textbf{post.appraisal\_id} in the database. 
+
+The pre-conditions are not tested in either function, although a assumption can be made about a buzz space being active. However, \textit{setAppraisal()} does not test whether or not the active period is before the current date or time.
+
+Due to the \textit{setAppraisal()} failing, the function does not meet the post-condition of appraisalTypeAssignment being persisted to the database.
 
 \newpage
 %----------------6 Assign appraisal to post ---------------
