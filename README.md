@@ -6,7 +6,7 @@ This is the repository for testing Status A and B.
 | -------------------------------- | ----------- |
 | Daniel Christopher Alves Araüjo  | 13073878    |
 | Taariq Ghoord					   | 10132806	 |
-| Lerato Lelo					   | 11197961	 |
+| Lerato Molokomme					   | 11197961	 |
 | Semaka Malapane				   | 13081129	 |
 | Mpedi Mello					   | 11210754    |
 | Ryno Pierce				   	   | 12003922	 | 
