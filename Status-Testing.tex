@@ -102,7 +102,32 @@ Keagan Thompson&13023782\\
 \section{activateAppraisalType Use case}
 \subsection{group A - activateAppraisalType}
 %add test results for group A activateAppraisalType here
-%Keagan and Ryno
+%Ryno
+
+Status A provides an \textit(activateAppraisalType) function, but does not match the specification. The function implemented asks for the \textit(appraisalType ID), but does not ask for a specific time period to be activated as indicated in figure 45 of the master specification. The code for the unit test is given by the figure below:
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/activateTypeAtestcode.jpg}
+		\caption{Unit test for activateAppraisalType}
+	\end{figure}
+
+The following is the result of running the code:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figures/activateTypeAResult.jpg}
+		\caption{Output of unit tests for activateAppraisalType}
+	\end{figure}
+
+The first test, \textit{activePeriodTest}, passes. \textit{activePeriod()} takes two strings as parameters that represent the starting and ending date. However, it does no testing to ensure that the dates are in the correct format supported by JavaScript. Secondly, it does not have a callback parameter to specify a callback function, so it cannot be run asynchronously.
+
+As you can see it could not connect to the database correctly in order to activate the appraisal type. Further inspection of the code show that it returns the value instead of using a callback function, this will cause it to always return empty or incorrect values as node runs asynchronously.
+
+The implementation of the function does not meet the pre condition seeing that it doesn't test if the buzz space is active as well as, whether the active period is before the current date.
+
+The post condition is net met due to the fact that the function could not connect to the database.
 
 \subsection{group B - activateAppraisalType}
 %add test results for group B activateAppraisalType here
@@ -115,7 +140,7 @@ The code for the unit tests is given by the figure below. For the test, NodeUnit
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.0\textwidth]{LaTeX/Figures/activateAppraisalTypeUnitTests.png}
+		\includegraphics[width=1.0\textwidth]{Figures/activateAppraisalTypeUnitTests.png}
 		\caption{Unit test for activateAppraisalType}
 	\end{figure}
 
@@ -123,7 +148,7 @@ The following was the output given by NodeUnit.
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{LaTeX/Figures/activateAppraisalTypeUnitTestOutput.png}
+		\includegraphics[width=0.8\textwidth]{Figures/activateAppraisalTypeUnitTestOutput.png}
 		\caption{Output of unit tests for activateAppraisalType}
 	\end{figure}
 
