@@ -162,6 +162,30 @@ The tests that are run, checks the status value for six users present in the dat
 %add test results for group A createAppraisalType here
 %Keagan
 
+As indicated in figure 43 of the master specification, Status A has met the requirements 
+but I could not get the method to run in testing. If any null values are passed in, the code will not 
+detect this problem which will cause the system to crash.
+
+My testing code is given below:
+
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=1.0\textwidth]{Figures/KTCode.png}
+ 	\caption{Unit test for createAppraisalType}
+ \end{figure}
+ 
+ and the resulting code:
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=1.0\textwidth]{Figures/KTError.png}
+ 	\caption{Unit test result for createAppraisalType}
+ \end{figure}
+ 
+ As the method was not runnable from my code, I looked at the code and could not see any code for verifying
+ the database was working correctly or any other variables for that matter. The code looks confusing to run
+ without any extra documentation.
+
 \subsection{group B - createAppraisalType}
 %add test results for group B createAppraisalType here
 %Semaka
