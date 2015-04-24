@@ -72,9 +72,21 @@ and the test failed.
 %add test results for group B setStatusCalculator here
 %Taariq
 Status B did not implement all the status calculators. Only ThreadDepth and numPost assessors are provided. The numPostAssessor counts the threads of a particular user and sets that as the status level of the user. The threadDepthAssessor calculates a users status level based on an average calculated by number of threads divided by a count of the total threads of a user. Unit tests for this will follow.
+It seems that the statusCalculatorRequest and statusCalculatorResult are implemented as functions so we cannot access their profileAssessors which must be the reason for the fail of the tests. Images are given below.
 
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/StatusCalculatorTest.png}
+		\caption{Unit tests for \textit{setStatusCalculator}}
+	\end{figure}
 
-
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/output1.png}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/output2.png}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
 
 \newpage
 %----------------3. Get status for profile ---------------
