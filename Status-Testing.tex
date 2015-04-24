@@ -191,7 +191,7 @@ The \textit{addAppraisalLevel} function doesn't meet the post condition, that is
 %add test results for group A activateAppraisalType here
 %Ryno
 
-Status A provides an \textit(activateAppraisalType) function, but does not match the specification. The function implemented asks for the \textit(appraisalType ID), but does not ask for a specific time period to be activated as indicated in figure 45 of the master specification. The code for the unit test is given by the figure below:
+Status A provides an \textit{activateAppraisalType} function, but does not match the specification. The function implemented asks for the \textit(appraisalType ID), but does not ask for a specific time period to be activated as indicated in figure 45 of the master specification. The code for the unit test is given by the figure below:
 
 
 	\begin{figure}[H]
@@ -207,8 +207,6 @@ The following is the result of running the code:
 		\includegraphics[width=0.8\textwidth]{Figures/activateTypeAResult.JPG}
 		\caption{Output of unit tests for activateAppraisalType}
 	\end{figure}
-
-The first test, \textit{activePeriodTest}, passes. \textit{activePeriod()} takes two strings as parameters that represent the starting and ending date. However, it does no testing to ensure that the dates are in the correct format supported by JavaScript. Secondly, it does not have a callback parameter to specify a callback function, so it cannot be run asynchronously.
 
 As you can see it could not connect to the database correctly in order to activate the appraisal type. Further inspection of the code show that it returns the value instead of using a callback function, this will cause it to always return empty or incorrect values as node runs asynchronously.
 
@@ -253,6 +251,25 @@ Due to the \textit{setAppraisal()} failing, the function does not meet the post-
 \subsection{group A - assignAppraisalToPost}
 %add test results for group A assignAppraisalToPost here
 %Keagan and Ryno
+
+Status A provides an \textit{assignAppraisalToPost} function that matches the spcification. The code for the unit test is given by the figure below:
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/aatptestCode.JPG}
+		\caption{Unit test for activateAppraisalType}
+	\end{figure}
+
+The following is the result of running the code:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figures/aatpResult.JPG}
+		\caption{Output of unit tests for assignAppraisalToPost}
+	\end{figure}
+
+As you can see it could not connect to the database to assign the appraisal. Further inspection of the code shows that the logic of the function is correct, unfortunately the pre condition is not tested to see if a buzz space is open. The post condition is not met as it couldn't assign the appraisal to a post.
 
 \subsection{group B - assignAppraisalToPost}
 %add test results for group B assignAppraisalToPost here
