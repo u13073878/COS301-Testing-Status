@@ -47,14 +47,14 @@ Keagan Thompson&13023782\\
 
 %----------------1. Assess Profile ---------------
 \section{assessProfile Use case}
-\subsection{group A - assessProfile}
+\subsection{Group A - assessProfile}
 %add test results for group A assessProfile here
 %Lerato
 Status A assesProfile function does not exists in the list of all the functions implemented. However the the function was used
 inside the function ThreadsDepthAssessor which made it difficult to test. So the code fail to adhere to the specified pre-condition 
 therefore  the post condition is also not met. ThreadsDepthAssesor was called and was used to test and the test failed.
 
-\subsection{group B - assessProfile}
+\subsection{Group B - assessProfile}
 %add test results for group B assessProfile here
 %Mpedi
 Status B provided the assessProfile function. However the parameter list was not done as specified in the master specifications. 
@@ -68,7 +68,7 @@ the same response everytime it was ran. So the post-condition was not met. Statu
 \newpage
 %----------------2. Set status calculator ---------------
 \section{setStatusCalculator Use case}
-\subsection{group A - setStatusCalculator}
+\subsection{Group A - setStatusCalculator}
 %add test results for group A setStatusCalculator here
 %Lutfiyya
 Status A provided a setStatusCalculator. 
@@ -91,7 +91,7 @@ Executing the tests above resulted in the following output:
 	
 The test, setStatusCalculatorTest fails because ProfileAssessor function does not work. The pre-condition were not tested which was to test if a buzz space is open therefore the post-conditions were not met.
 
-\subsection{group B - setStatusCalculator}
+\subsection{Group B - setStatusCalculator}
 %add test results for group B setStatusCalculator here
 %Taariq
 Status B did not implement all the status calculators. Only ThreadDepth and numPost assessors are provided. The numPostAssessor counts the threads of a particular user and sets that as the status level of the user. The threadDepthAssessor calculates a users status level based on an average calculated by number of threads divided by a count of the total threads of a user. Unit tests for this will follow.
@@ -114,7 +114,7 @@ It seems that the statusCalculatorRequest and statusCalculatorResult are impleme
 \newpage
 %----------------3. Get status for profile ---------------
 \section{getStatusForProfile Use case}
-\subsection{group A - getStatusForProfile}
+\subsection{Group A - getStatusForProfile}
 %add test results for group A getStatusForProfile here
 The function take the user ID and a callback. But the callback does not return and the user ID does not get initialized, hence the function is called on invalid parameters.
 Pre-condition: user has an ID
@@ -131,7 +131,7 @@ Post-condition: User's profile is returned from the user ID.
 
 
 
-\subsection{group B - getStatusForProfile}
+\subsection{Group B - getStatusForProfile}
 %add test results for group B getStatusForProfile here
 Status B provided a \textit{getStatusForProfile} as in Figure 41 of the master specifications. No pre- or post-conditions are tested for in the code written by Status B, however none were provided in the given master specifications.
 
@@ -158,7 +158,7 @@ The tests that are run, checks the status value for six users present in the dat
 \newpage
 %----------------4. Create appraisal type ---------------
 \section{createAppraisalType Use case}
-\subsection{group A - createAppraisalType}
+\subsection{Group A - createAppraisalType}
 %add test results for group A createAppraisalType here
 %Keagan
 
@@ -186,7 +186,7 @@ My testing code is given below:
  the database was working correctly or any other variables for that matter. The code looks confusing to run
  without any extra documentation.
 
-\subsection{group B - createAppraisalType}
+\subsection{Group B - createAppraisalType}
 %add test results for group B createAppraisalType here
 %Semaka
 
@@ -216,7 +216,7 @@ The \textit{addAppraisalLevel} function doesn't meet the post condition, that is
 \newpage
 %----------------5. Activate appraisal type ---------------
 \section{activateAppraisalType Use case}
-\subsection{group A - activateAppraisalType}
+\subsection{Group A - activateAppraisalType}
 %add test results for group A activateAppraisalType here
 %Ryno
 
@@ -243,7 +243,7 @@ The implementation of the function does not meet the pre condition seeing that i
 
 The post condition is net met due to the fact that the function could not connect to the database.
 
-\subsection{group B - activateAppraisalType}
+\subsection{Group B - activateAppraisalType}
 %add test results for group B activateAppraisalType here
 %Chris
 
@@ -277,7 +277,7 @@ Due to the \textit{setAppraisal()} failing, the function does not meet the post-
 \newpage
 %----------------6 Assign appraisal to post ---------------
 \section{assignAppraisalToPost Use case}
-\subsection{group A - assignAppraisalToPost}
+\subsection{Group A - assignAppraisalToPost}
 %add test results for group A assignAppraisalToPost here
 %Keagan and Ryno
 
@@ -300,7 +300,7 @@ The following is the result of running the code:
 
 As you can see it could not connect to the database to assign the appraisal. Further inspection of the code shows that the logic of the function is correct, unfortunately the pre condition is not tested to see if a buzz space is open. The post condition is not met as it couldn't assign the appraisal to a post.
 
-\subsection{group B - assignAppraisalToPost}
+\subsection{Group B - assignAppraisalToPost}
 %add test results for group B assignAppraisalToPost here
 %Frikkie
 There is no explicit \textit{assignAppraisalToPost} function available from Status B, however, they have provided a function \textit{setAppraisal} which seems to attempt to fulfil that which is prescribed by \textit{assignAppraisalToPost}, as seen on Figure 46 of the master specifications.
