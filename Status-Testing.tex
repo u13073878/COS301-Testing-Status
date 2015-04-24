@@ -130,7 +130,28 @@ The tests that are run, checks the status value for six users present in the dat
 %add test results for group B createAppraisalType here
 %Semaka
 
+The \textit{createAppraisalType} function created by Status B meets the requirements of the specification. The function implemented asks for the \textit{name} and \textit{description}. \textit{activityPeriod} is also created. Therefore the function meets the requirements as indicated in figure 43 of the specification.
 
+The \textit{addAppraisalLevel} function created by Status B has a name and a level number. This meets the requirements.
+
+The code for the unit tests is given below. The unit tests were made using Nodeunit.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/createAppraisalTypeUnitTests.png}
+		\caption{Unit test for createAppraisalType and addAppraisalLevel}
+	\end{figure}
+
+The following was the output of the createAppraisalType unit test created above:
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/createAppraisalTypeUnitTestsResult.png}
+		\caption{The result of the unit test}
+	\end{figure}
+	
+The \textit{createAppraisalType} function meets the post condition that an appraisal is created (the function passes the unit test) when the function is called.
+
+The \textit{addAppraisalLevel} function doesn't meet the post condition, that is an appraisal level can't be created - the function fails the unit test.
 
 \newpage
 %----------------5. Activate appraisal type ---------------
