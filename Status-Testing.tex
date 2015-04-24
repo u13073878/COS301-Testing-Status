@@ -49,14 +49,15 @@ Keagan Thompson&13023782\\
 \section{assessProfile Use case}
 \subsection{group A - assessProfile}
 %add test results for group A assessProfile here
-%Mpedi
-
+%Lerato
+Status A assesProfile function does not exists in the list of all the functions implemented. However the the function was used
+inside the function ThreadsDepthAssessor which made it difficult to test. So the code fail to adhere to the specified pre-condition 
+therefore  the post condition is also not met. ThreadsDepthAssesor was called and was used to test and the test failed.
 
 \subsection{group B - assessProfile}
 %add test results for group B assessProfile here
-%Lerato
-
-
+%Mpedi
+Status B provided the assessProfile function. However the parameter list was not done as specified in the master specifications. The assessProfile that was tested required 3 parameters (assessProfileRequest, user, callback) while the master specification specified only one parameter object that contains a profile ID. The assessProfile function did not test for the only pre-condition that was specified in the master specification, which is check if the profile with specified identity exists. So the code failed in that regard. In addition to that, it appears that the function did not do any profile assessment calculation at all, and thus gave the same response everytime it was ran. So the post-condition was not met. Status B assessProfile failed overall.
 
 \newpage
 %----------------2. Set status calculator ---------------
@@ -64,19 +65,64 @@ Keagan Thompson&13023782\\
 \subsection{group A - setStatusCalculator}
 %add test results for group A setStatusCalculator here
 %Lutfiyya
+Status A provided a setStatusCalculator. 
+The setStatusCalculator function provided takes a setStatusCalculatorRequest which consists of the SpaceId and profileAssessorID.NumPostsAssessor and ProfileAssessor where implemented.
+Nodeunit was used to test the setStatusCalculator function and the code of the unit test appears below:
 
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/setStatusCalculator.png}
+		\caption{Unit tests for \textit{setStatusCalculator}}
+	\end{figure}
+
+Executing the tests above resulted in the following output:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/setStatusCalculatorOutput.png}
+		\caption{Results of the unit tests for \textit{setStatusCalculator}}
+	\end{figure}
+	
+The test, setStatusCalculatorTest fails because ProfileAssessor function does not work. The pre-condition were not tested which was to test if a buzz space is open therefore the post-conditions were not met.
 
 \subsection{group B - setStatusCalculator}
 %add test results for group B setStatusCalculator here
 %Taariq
+Status B did not implement all the status calculators. Only ThreadDepth and numPost assessors are provided. The numPostAssessor counts the threads of a particular user and sets that as the status level of the user. The threadDepthAssessor calculates a users status level based on an average calculated by number of threads divided by a count of the total threads of a user. Unit tests for this will follow.
+It seems that the statusCalculatorRequest and statusCalculatorResult are implemented as functions so we cannot access their profileAssessors which must be the reason for the fail of the tests. Images are given below.
 
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/codes.PNG}
+		\caption{Unit tests for \textit{setStatusCalculator}}
+	\end{figure}
 
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/statuscalculator.PNG}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/statuscalculator2.PNG}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
 
 \newpage
 %----------------3. Get status for profile ---------------
 \section{getStatusForProfile Use case}
 \subsection{group A - getStatusForProfile}
 %add test results for group A getStatusForProfile here
+The function take the user ID and a callback. But the callback does not return and the user ID does not get initialized, hence the function is called on invalid parameters.
+Pre-condition: user has an ID
+Post-condition: User's profile is returned from the user ID.
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/get_status_profile.PNG}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
+
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{Figures/get_status_profile2.PNG}
+		\caption{Unit tests for \textit{setStatusCalculator test output}}
+	\end{figure}
+
 
 
 \subsection{group B - getStatusForProfile}
@@ -114,14 +160,60 @@ The tests that are run, checks the status value for six users present in the dat
 %add test results for group B createAppraisalType here
 %Semaka
 
+The \textit{createAppraisalType} function created by Status B meets the requirements of the specification. The function implemented asks for the \textit{name} and \textit{description}. \textit{activityPeriod} is also created. Therefore the function meets the requirements as indicated in figure 43 of the specification.
 
+The \textit{addAppraisalLevel} function created by Status B has a name and a level number. This meets the requirements.
+
+The code for the unit tests is given below. The unit tests were made using Nodeunit.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/createAppraisalTypeUnitTests.png}
+		\caption{Unit test for createAppraisalType and addAppraisalLevel}
+	\end{figure}
+
+The following was the output of the createAppraisalType unit test created above:
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/createAppraisalTypeUnitTestsResult.png}
+		\caption{The result of the unit test}
+	\end{figure}
+	
+The \textit{createAppraisalType} function meets the post condition that an appraisal is created (the function passes the unit test) when the function is called.
+
+The \textit{addAppraisalLevel} function doesn't meet the post condition, that is an appraisal level can't be created - the function fails the unit test.
 
 \newpage
 %----------------5. Activate appraisal type ---------------
 \section{activateAppraisalType Use case}
 \subsection{group A - activateAppraisalType}
 %add test results for group A activateAppraisalType here
-%Keagan and Ryno
+%Ryno
+
+Status A provides an \textit(activateAppraisalType) function, but does not match the specification. The function implemented asks for the \textit(appraisalType ID), but does not ask for a specific time period to be activated as indicated in figure 45 of the master specification. The code for the unit test is given by the figure below:
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/activateTypeAtestcode.JPG}
+		\caption{Unit test for activateAppraisalType}
+	\end{figure}
+
+The following is the result of running the code:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figures/activateTypeAResult.JPG}
+		\caption{Output of unit tests for activateAppraisalType}
+	\end{figure}
+
+The first test, \textit{activePeriodTest}, passes. \textit{activePeriod()} takes two strings as parameters that represent the starting and ending date. However, it does no testing to ensure that the dates are in the correct format supported by JavaScript. Secondly, it does not have a callback parameter to specify a callback function, so it cannot be run asynchronously.
+
+As you can see it could not connect to the database correctly in order to activate the appraisal type. Further inspection of the code show that it returns the value instead of using a callback function, this will cause it to always return empty or incorrect values as node runs asynchronously.
+
+The implementation of the function does not meet the pre condition seeing that it doesn't test if the buzz space is active as well as, whether the active period is before the current date.
+
+The post condition is net met due to the fact that the function could not connect to the database.
 
 \subsection{group B - activateAppraisalType}
 %add test results for group B activateAppraisalType here
