@@ -57,7 +57,12 @@ therefore  the post condition is also not met. ThreadsDepthAssesor was called an
 \subsection{group B - assessProfile}
 %add test results for group B assessProfile here
 %Mpedi
-
+Status B provided the assessProfile function. However the parameter list was not done as specified in the master specifications. 
+The assessProfile that was tested required 3 parameters (assessProfileRequest, user, callback) while the master specification 
+specified only one parameter object that contains a profile ID. The assessProfile function did not test for the only pre-condition 
+that was specified in the master specification, which is check if the profile with specified identity exists. So the code failed in 
+that regard. In addition to that, it appears that the function did not do any profile assessment calculation at all, and thus gave 
+the same response everytime it was ran. So the post-condition was not met. Status B assessProfile failed overall.
 
 
 \newpage
