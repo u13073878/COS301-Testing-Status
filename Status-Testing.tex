@@ -51,8 +51,7 @@ Keagan Thompson&13023782\\
 %add test results for group A assessProfile here
 %Lerato
 Status A assesProfile function does not exists in the list of all the functions implemented. However the the function was used
-inside the function ThreadsDepthAssessor which made it difficult to test. ThreadsDepthAssesor was called and was used to test 
-and the test failed.
+inside the function ThreadsDepthAssessor which made it difficult to test. ThreadsDepthAssesor was called and was used to test and the test failed.
 
 \subsection{group B - assessProfile}
 %add test results for group B assessProfile here
@@ -66,7 +65,25 @@ and the test failed.
 \subsection{group A - setStatusCalculator}
 %add test results for group A setStatusCalculator here
 %Lutfiyya
+Status A provided a setStatusCalculator. 
+The setStatusCalculator function provided takes a setStatusCalculatorRequest which consists of the SpaceId and profileAssessorID.NumPostsAssessor and ProfileAssessor where implemented.
+Nodeunit was used to test the setStatusCalculator function and the code of the unit test appears below:
 
+\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/setStatusCalculator.png}
+		\caption{Unit tests for \textit{setStatusCalculator}}
+	\end{figure}
+
+Executing the tests above resulted in the following output:
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Figures/setStatusCalculatorOutput.png}
+		\caption{Results of the unit tests for \textit{setStatusCalculator}}
+	\end{figure}
+	
+The test, setStatusCalculatorTest fails because ProfileAssessor function does not work. The pre-condition were not tested which was to test if a buzz space is open therefore the post-conditions were not met.
 
 \subsection{group B - setStatusCalculator}
 %add test results for group B setStatusCalculator here
